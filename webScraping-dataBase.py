@@ -79,7 +79,6 @@ def create_and_populate():
             estado = "finalizado"
             errores = "0"
             try:
-
                 if len(i) ==7:
                     kilometros = "ND"
                     motor = "ND"
@@ -92,6 +91,5 @@ def create_and_populate():
                 cur.execute("INSERT INTO auditoria(fecha,paginaWeb,numeroRegistros,estado,errores) VALUES ('%s','%s','%s','%s','%s')" % (fecha, paginaWeb, NumeroRegistro, estado, errores))
             except mdb.Error as e:
                 print("Faltan datos")
-
 create_and_populate()
 
